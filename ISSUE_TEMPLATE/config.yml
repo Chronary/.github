@@ -1,0 +1,16 @@
+# Org-level issue template config. Lives in Chronary/.github and applies to
+# every Chronary public repo that does NOT define its own ISSUE_TEMPLATE/
+# folder. Per GitHub's documented behavior, any repo-level ISSUE_TEMPLATE/
+# folder fully replaces this file (including the contact_links below), so
+# per-repo bug/feature forms ship in each mirror repo separately.
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://docs.chronary.ai
+    about: Quickstart, API reference, MCP setup, and examples.
+  - name: Product support and account questions
+    url: mailto:support@chronary.ai
+    about: Billing, account issues, and questions that are not bugs.
+  - name: Security issue (responsible disclosure)
+    url: https://github.com/Chronary/.github/blob/main/SECURITY.md
+    about: Do not file security issues as GitHub issues. See SECURITY.md for the disclosure process.

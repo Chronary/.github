@@ -1,0 +1,9 @@
+{
+  "artifact": "github-profile",
+  "version": "2026.05.11+07973d9",
+  "public_tag": "2026.05.11+07973d9",
+  "private_source_sha": "07973d9f6f83532935dea5931773ca571f748233",
+  "private_release_tag": "public-release/20260511.1-07973d9",
+  "publish_registry": false,
+  "generated_at": "2026-05-11T17:44:25.168Z"
+}
