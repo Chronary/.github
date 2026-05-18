@@ -42,7 +42,6 @@ Most calendar APIs were built for human-driven calendar apps and assume an inter
 - **Product and account support** — [support@chronary.ai](mailto:support@chronary.ai)
 - **Security and responsible disclosure** — [security@chronary.ai](mailto:security@chronary.ai) (see [SECURITY.md](./SECURITY.md))
 - **Privacy and DPA requests** — [privacy@chronary.ai](mailto:privacy@chronary.ai)
-- **X / Twitter** — [@chronaryai](https://x.com/chronaryai)
 - **Discord** — [Join the server](https://discord.gg/nukjpejk2)
 
 A note on these repos: most are read-only mirrors of an internal monorepo, populated by an automated release pipeline. **Pull requests are not accepted on the mirrors** — bug reports go to Issues on the surface where the bug surfaced. `chronary-examples` and `chronary-skills` are OSS-native and welcome PRs directly. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full policy.
