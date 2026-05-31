@@ -6,6 +6,57 @@ Chronary gives AI agents a native way to create, manage, and query calendars —
 
 [**Get started →**](https://docs.chronary.ai/getting-started/quickstart/)  ·  [**Sign in**](https://console.chronary.ai)  ·  [Documentation](https://docs.chronary.ai)  ·  [chronary.ai](https://chronary.ai)
 
+## Quickstart for AI coding agents
+
+First, grab an API key at [console.chronary.ai/sign-up](https://console.chronary.ai/sign-up) — then pick your tool below.
+
+> **Windows:** replace `curl -fsSL … | bash` with `iwr -useb … | iex` in any block.
+
+**1. Claude Code** — install the plugin from inside the Claude Code REPL:
+
+```text
+/plugin marketplace add Chronary/chronary-skills
+/plugin install chronary@chronary
+/reload-plugins
+```
+
+Run `/plugins` to confirm `chronary` is listed. (The doubled `chronary@chronary` is `<plugin>@<marketplace>` — both happen to be named `chronary`.) Installs four skills, three slash commands, and the MCP server config in one bundle.
+
+**2. Any AGENTS.md-aware agent (Codex, Aider, Devin, Gemini CLI, Amazon Q, Copilot, …)** — drop our `AGENTS.md` into your project root:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Chronary/chronary-skills/main/AGENTS.md -o AGENTS.md
+```
+
+Codex also reads `~/.codex/AGENTS.md` for user-wide instructions.
+
+**3. Cursor / VS Code Copilot / Windsurf** — one-liner installer copies the skill files into the right per-editor location:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Chronary/chronary-skills/main/install.sh | bash -s -- cursor
+# targets: cursor | vscode | windsurf | all
+```
+
+For live API calls from these editors, also configure the MCP server (block 4 below).
+
+**4. MCP clients (Claude Desktop, Cursor, Windsurf, VS Code)** — add this to your client's MCP config file:
+
+```json
+{
+  "mcpServers": {
+    "chronary": {
+      "command": "npx",
+      "args": ["-y", "@chronary/mcp"],
+      "env": { "CHRONARY_API_KEY": "chr_sk_..." }
+    }
+  }
+}
+```
+
+> _VS Code (`.vscode/mcp.json`) uses `servers` instead of `mcpServers`; everything else is identical._
+
+Verify with `npx -y @chronary/mcp --help`. Full per-client setup (file locations, auto-approve patterns, troubleshooting) lives in [chronary-skills](https://github.com/Chronary/chronary-skills).
+
 ## Repositories
 
 The published surfaces — open these to install, file bugs, or read the source:
@@ -24,7 +75,7 @@ The published surfaces — open these to install, file bugs, or read the source:
 - [chronary-go](https://github.com/Chronary/chronary-go) — Go SDK for native Go services.
 - [chronary-schemas](https://github.com/Chronary/chronary-schemas) — Zod schemas and TypeScript types shared by the SDK, webhooks, and OpenAPI spec.
 - [chronary-toolkit](https://github.com/Chronary/chronary-toolkit) — Agent-framework adapters that wrap the SDK for popular AI frameworks.
-- [chronary-skills](https://github.com/Chronary/chronary-skills) — Agent skills and IDE plugins for Claude Code, Cursor, VS Code Copilot, Codex, and Windsurf.
+- [chronary-skills](https://github.com/Chronary/chronary-skills) — Full reference for the Quickstart above (installers, plugin manifest, AGENTS.md, all skill files).
 - [homebrew-tap](https://github.com/Chronary/homebrew-tap) — Homebrew formula for the `chronary` CLI.
 
 ## How Chronary differs
@@ -38,6 +89,7 @@ Most calendar APIs were built for human-driven calendar apps and assume an inter
 
 ## Community and contact
 
+- **Website** — [chronary.ai](https://chronary.ai)
 - **Documentation** — [docs.chronary.ai](https://docs.chronary.ai)
 - **Product and account support** — [support@chronary.ai](mailto:support@chronary.ai)
 - **Security and responsible disclosure** — [security@chronary.ai](mailto:security@chronary.ai) (see [SECURITY.md](https://github.com/Chronary/.github/blob/main/SECURITY.md))
