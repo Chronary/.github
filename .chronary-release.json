@@ -1,9 +1,9 @@
 {
   "artifact": "github-profile",
-  "version": "2026.05.31+6a7b8d7",
-  "public_tag": "2026.05.31+6a7b8d7",
-  "private_source_sha": "6a7b8d756964c7aaca4372b98083c74b738a4f83",
-  "private_release_tag": "public-release/20260531.1-6a7b8d7",
+  "version": "2026.06.04+000087d",
+  "public_tag": "2026.06.04+000087d",
+  "private_source_sha": "000087d1beac149bd60d1f16b8e0e36dbde5c0b3",
+  "private_release_tag": "public-release/20260604.4-000087d",
   "publish_registry": false,
-  "generated_at": "2026-05-31T08:17:17.121Z"
+  "generated_at": "2026-06-04T19:44:54.685Z"
 }
